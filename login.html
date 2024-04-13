@@ -1,0 +1,84 @@
+<!DOCTYPE html>   
+<html>   
+    <head>  
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <title> Login Page </title>  
+        <style>   
+            Body {  
+                font-family: Calibri, Helvetica, sans-serif;  
+                background-color: pink;
+            }  
+            button {   
+                background-color: #4CAF50;   
+                width: 100%;  
+                color: black;   
+                padding: 15px;   
+                margin: 10px 0px;   
+                border: none;   
+                cursor: pointer;   
+            }   
+            form {   
+                border: 3px solid #f1f1f1;   
+            }   
+            input[type=text], input[type=password] {   
+                width: 100%;   
+                margin: 8px 0;  
+                padding: 12px 20px;   
+                display: inline-block;   
+                border: 2px solid black;   
+                box-sizing: border-box;   
+            }  
+            button:hover {   
+                opacity: 0.7;   
+            }   
+            .cancelbtn {   
+                width: auto;   
+                padding: 10px 18px;  
+                margin: 10px 5px;  
+            }   
+            .container {   
+                padding: 25px;   
+                background-color: lightblue;  
+            }   
+        </style>  
+        <script type="text/javascript" language="javascript">
+            function form(){
+                u1=document.form1.d1.value
+                u2=document.form1.d2.value
+                u3=document.form1.d3.value
+                val1=/^\d{10}$/
+                a=u2.length
+                val2=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(val2.test(u1) && val1.test(u3))
+                {
+                    if(a>=6 && a<=12)
+                    {
+                        alert("Log-in Successfully!!")
+                    }
+                    
+                }
+                else
+                {
+                    alert("Their must be error.Try again!!")
+                }
+            }
+        </script> 
+    </head>    
+<body>       
+    <form onsubmit="form()" name="form1">  
+        <div class="container">   
+            <label>Email id : </label>   
+            <input type="text" placeholder="Enter email id" name="email" id="d1" required>  
+            <label>Password : </label>   
+            <input type="text" placeholder="Enter Password" name="password" id="d2" required>  
+            <br>
+            <label>Phone number: </label>   
+            <input type="text" placeholder="Enter Phone number" name="phone" id="d3" required>  
+            <br>
+            <input type="submit" value="Login"> 
+            <br>   
+            Forgot <a href="#"> password? </a>   
+        </div>   
+    </form>    
+</body>     
+</html>  
